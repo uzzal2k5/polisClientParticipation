@@ -4,7 +4,6 @@ module.exports = function(grunt) {
   grunt.option('stack', true);
 
   var port = process.env.PORT || 8000,
-  // change from localhost to 0.0.0.0 by uzzal
       hostname = 'localhost',
       templates = {},
       paths = {

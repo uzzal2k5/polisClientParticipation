@@ -75,6 +75,6 @@
     "test": "node ./node_modules/.bin/grunt test"
   },
   "engines": {
-    "node": "6.2.0"
+    "node": "8.11.1"
   }
 }

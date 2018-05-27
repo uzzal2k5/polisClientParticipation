@@ -11,14 +11,16 @@ RUN apt-get install -y git
 ADD polisClientParticipation ./
 
 # working with package.json
-RUN npm install -g bower d3@3.0.8
-#sudo npm install -g bower
+RUN npm install -g bower
 RUN npm install
-RUN bower install d3@3.0.8 --config.interactive=false --allow-root
-#select an answer (1/2)
-RUN npm rebuild node-sass --force
+RUN bower install d3#~3.0.8 --config.interactive=false  --allow-root
+#bower install d3#~3.0.8 --config.interactive=false  --allow-root
+# --non-interactive
+#RUN npm rebuild node-sass --force
 
+COPY polis.config ./
+COPY .env_dev ./
 
 EXPOSE 5001 8000
 
-#ENTRYPOINT ["sh","x"]
+ENTRYPOINT ["sh","x"]

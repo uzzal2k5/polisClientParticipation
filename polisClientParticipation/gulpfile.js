@@ -189,7 +189,7 @@ gulp.task('connect', [], function() {
 
   app.listen(5001);
   console.log('localhost:5001');
-  // Change from localhost to 0.0.0.0
+
 });
 
 function getGitHash() {
