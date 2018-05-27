@@ -14,8 +14,9 @@ ADD polisClientParticipation ./
 RUN npm install -g bower d3@3.0.8
 #sudo npm install -g bower
 RUN npm install
-#RUN bower install d3@3.0.8 --config.interactive=false --allow-root
+RUN bower install d3@3.0.8 --config.interactive=false --allow-root
 #select an answer (1/2)
+RUN npm rebuild node-sass --force
 
 
 EXPOSE 5001 8000
