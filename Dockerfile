@@ -14,14 +14,13 @@ ADD polisClientParticipation ./
 RUN npm install -g bower
 RUN npm install
 RUN bower install --config.interactive=false  --allow-root  -j bower.json -f
-#RUN bower install d3#~3.0.8 --config.interactive=false  --allow-root
-#bower install d3#~3.0.8 --config.interactive=false  --allow-root
-# --non-interactive
-#RUN npm rebuild node-sass --force
 
+# Copy Configuration
 COPY polis.config ./
 COPY .env_dev ./
 
+# Exposing port to communicate
 EXPOSE 5001 8000
 
+# Running Scripts
 ENTRYPOINT ["sh","x"]
