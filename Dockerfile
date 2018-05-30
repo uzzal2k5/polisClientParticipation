@@ -13,7 +13,8 @@ ADD polisClientParticipation ./
 # working with package.json
 RUN npm install -g bower
 RUN npm install
-RUN bower install d3#~3.0.8 --config.interactive=false  --allow-root
+RUN bower install --config.interactive=false  --allow-root  -j bower.json -f
+#RUN bower install d3#~3.0.8 --config.interactive=false  --allow-root
 #bower install d3#~3.0.8 --config.interactive=false  --allow-root
 # --non-interactive
 #RUN npm rebuild node-sass --force
